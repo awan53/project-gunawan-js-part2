@@ -3,7 +3,7 @@ const router = express.Router();
 
 //@route POST api/users
 // @desc test route
-// @access public atau private
+// @access Public
 
 router.post('/', (req, res) => {
     console.log(req.body);

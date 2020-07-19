@@ -4,7 +4,7 @@ const connectDB = require('./config/db');
 //memanggil connectDB
 connectDB();
 //initianl Middleware
-app.use(express.json({extended: false}));
+app.use(express.json({ extended: false }));
 
 //test route index
 app.get('/', (req, res) => res.json('APIs Works!'));
