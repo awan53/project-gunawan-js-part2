@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();
 const connectDB = require('./config/db');
+const bodyParser = require('body-parser');
 //memanggil connectDB
 connectDB();
 //initianl Middleware
 app.use(express.json({ extended: false }));
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 //test route index
 app.get('/', (req, res) => res.json('APIs Works!'));
